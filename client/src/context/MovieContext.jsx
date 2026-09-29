@@ -129,6 +129,8 @@ export function MovieProvider({ children }) {
     setFavorites((prev) => prev.filter((movie) => movie.id !== movieId));
   }, []);
 
+  const clearFavorites = useCallback(() => setFavorites([]), []);
+
   const isFavorite = useCallback(
     (movieId) => favorites.some((movie) => movie.id === movieId),
     [favorites],
@@ -151,6 +153,7 @@ export function MovieProvider({ children }) {
       loadMoreSearchResults,
       addFavorite,
       removeFavorite,
+      clearFavorites,
       isFavorite,
     }),
     [
@@ -169,6 +172,7 @@ export function MovieProvider({ children }) {
       loadMoreSearchResults,
       addFavorite,
       removeFavorite,
+      clearFavorites,
       isFavorite,
     ],
   );

@@ -57,6 +57,11 @@ export const getMovieGenres = async () => {
   return data.genres || [];
 };
 
+export const getMovieRecommendations = async (movieId) => {
+  const { data } = await api.get(`/movie/${movieId}/recommendations`);
+  return data.results || [];
+};
+
 // Axios error into a friendly message.
 export const getErrorMessage = (error) => {
   if (!API_KEY) {
