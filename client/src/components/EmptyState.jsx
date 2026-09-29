@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
-import MovieFilterIcon from '@mui/icons-material/MovieFilter';
+import { MovieFilter as MovieFilterIcon } from '@mui/icons-material';
 
 export default function EmptyState({ message, actionLabel, onAction }) {
   return (

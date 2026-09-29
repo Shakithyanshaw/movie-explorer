@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import { AppThemeProvider } from './context/ThemeContext';
-import { MovieProvider } from './context/MovieContext';
 import './index.css';
+import App from './App.jsx';
+import { BrowserRouter } from 'react-router-dom';
+import { AppThemeProvider } from './context/ThemeContext.jsx';
+import { MovieProvider } from './context/MovieContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

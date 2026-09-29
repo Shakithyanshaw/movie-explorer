@@ -8,10 +8,12 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import MovieIcon from '@mui/icons-material/Movie';
-import HomeIcon from '@mui/icons-material/Home';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LogoutIcon from '@mui/icons-material/Logout';
+import {
+  Favorite as FavoriteIcon,
+  Home as HomeIcon,
+  Logout as LogoutIcon,
+  Movie as MovieIcon,
+} from '@mui/icons-material';
 import { Link as RouterLink, NavLink, useNavigate } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useMovies } from '../context/MovieContext';

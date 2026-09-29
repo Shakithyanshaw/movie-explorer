@@ -7,10 +7,10 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import MovieIcon from '@mui/icons-material/Movie';
+import { Movie as MovieIcon } from '@mui/icons-material';
 import { Navigate, useNavigate } from 'react-router-dom';
-import ThemeToggle from '../components/ThemeToggle';
 import { getAuthState, setAuthState } from '../utils/storage';
+import ThemeToggle from '../components/ThemeToggle';
 
 export default function Login() {
   const navigate = useNavigate();

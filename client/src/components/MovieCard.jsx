@@ -7,10 +7,12 @@ import {
   IconButton,
   Typography,
 } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import StarIcon from '@mui/icons-material/Star';
-import MovieIcon from '@mui/icons-material/Movie';
+import {
+  Favorite as FavoriteIcon,
+  FavoriteBorder as FavoriteBorderIcon,
+  Star as StarIcon,
+  Movie as MovieIcon,
+} from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
 import { imageUrl } from '../services/tmdbApi';
