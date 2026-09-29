@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Box, Chip, Container, Typography } from '@mui/material';
-import HistoryIcon from '@mui/icons-material/History';
+import { History as HistoryIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 import MovieGrid from '../components/MovieGrid';
