@@ -52,6 +52,11 @@ export const findTrailer = (videos = []) => {
   return trailers.find((video) => video.official) || trailers[0] || null;
 };
 
+export const getMovieGenres = async () => {
+  const { data } = await api.get('/genre/movie/list');
+  return data.genres || [];
+};
+
 // Axios error into a friendly message.
 export const getErrorMessage = (error) => {
   if (!API_KEY) {
