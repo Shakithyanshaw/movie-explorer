@@ -101,7 +101,6 @@ export default function MovieCard({ movie }) {
         </CardContent>
       </CardActionArea>
 
-      {/* Sibling of the link (not a child), so clicking it never navigates. */}
       <IconButton
         onClick={toggleFavorite}
         aria-label={

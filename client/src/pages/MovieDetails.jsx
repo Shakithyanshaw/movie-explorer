@@ -96,7 +96,6 @@ export default function MovieDetails() {
       setLoading(true);
       setError('');
       try {
-        // Credits and videos are optional, so their failures don't break the page.
         const [details, credits, videos] = await Promise.all([
           getMovieDetails(id),
           getMovieCredits(id).catch(() => null),

@@ -8,7 +8,6 @@ const YEAR_OPTIONS = Array.from(
   (_, index) => new Date().getFullYear() - index,
 );
 
-// Controlled filter bar: the parent owns the filter values.
 export default function MovieFilters({
   filters,
   genres,

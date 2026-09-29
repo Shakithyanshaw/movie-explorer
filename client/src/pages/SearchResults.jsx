@@ -38,7 +38,6 @@ export default function SearchResults() {
   const [genres, setGenres] = useState([]);
   const sentinelRef = useRef(null);
 
-  // Genre list is optional: if it fails, the genre filter just stays empty.
   useEffect(() => {
     let cancelled = false;
     getMovieGenres()
@@ -58,7 +57,6 @@ export default function SearchResults() {
     searchMovies(query);
   }, [query, searchMovies]);
 
-  // Ignore results left over from a previous query.
   const results = searchQuery === query ? searchResults : [];
   const filtered = useMemo(
     () => results.filter((movie) => matchesFilters(movie, filters)),
@@ -77,7 +75,6 @@ export default function SearchResults() {
     setFilters((prev) => ({ ...prev, ...changes }));
 
   // Infinite scroll: load the next page when the sentinel nears the viewport.
-  // If filters hide everything, the sentinel stays visible and pages keep loading.
   useEffect(() => {
     const node = sentinelRef.current;
     if (!node || !hasMore || searchLoading || searchError) return undefined;
