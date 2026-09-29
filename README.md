@@ -6,42 +6,90 @@ Movie Explorer ("Discover Your Favorite Films") is a responsive React web app bu
 
 ## Features
 
-- Client-side demo login/logout with protected routes
-- Trending movies on the home page
-- Search with Enter/button, empty-query validation, and infinite scrolling (IntersectionObserver)
-- Last search remembered (pre-fills the search bar, shortcut chip on Home)
-- Movie details: backdrop, poster, rating, runtime, genres, overview, cast, YouTube trailer
-- Favorites that persist across refreshes
-- Light/dark mode that persists across refreshes
-- Loading, error (with Retry), and empty states everywhere
-- Bonus: minimum-rating filter on search results
-- Mobile-first responsive layout (2 / 3 / 4 / 5 column grid)
+- User login with client-side authentication
+- Protected application routes
+- Trending movies from TMDb
+- Movie search
+- Infinite scrolling for search results
+- Detailed movie information
+- Movie genres, ratings, release dates, runtime,and overview
+- Cast information
+- YouTube trailers when available
+- Add/remove favorite movies
+- Favorites persisted using localStorage
+- Last searched movie persisted using localStorage
+- Light and dark mode
+- Responsive mobile-first UI
+- Loading, error, and empty states
+- Missing image/trailer handling
+- Material UI components and responsive design
 
-## Technologies
+## Tech Stack
 
-React, JavaScript (JSX), Create React App (react-scripts), Material UI, Axios, React Router DOM, React Context API, localStorage, TMDb REST API.
+- React
+- JavaScript
+- JSX
+- Create React App
+- Material UI (MUI)
+- Axios
+- React Router DOM
+- React Context API
+- localStorage
+- TMDb API
 
 ## Project Structure
 
 ```
 movie-explorer/
-├── public/index.html
+│
+├── public/
+│
 ├── src/
-│   ├── components/  Navbar, SearchBar, MovieCard, MovieGrid, Loading,
-│   │                ErrorMessage, EmptyState, ThemeToggle, ProtectedRoute
-│   ├── pages/       Login, Home, SearchResults, MovieDetails, Favorites
-│   ├── context/     MovieContext, ThemeContext
-│   ├── services/    tmdbApi.js
-│   ├── utils/       storage.js, format.js
-│   ├── App.jsx, index.js, index.css
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── MovieCard.jsx
+│   │   ├── MovieGrid.jsx
+│   │   ├── Loading.jsx
+│   │   ├── ErrorMessage.jsx
+│   │   ├── EmptyState.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── ProtectedRoute.jsx
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Home.jsx
+│   │   ├── SearchResults.jsx
+│   │   ├── MovieDetails.jsx
+│   │   └── Favorites.jsx
+│   │
+│   ├── context/
+│   │   ├── MovieContext.jsx
+│   │   └── ThemeContext.jsx
+│   │
+│   ├── services/
+│   │   └── tmdbApi.js
+│   │
+│   ├── utils/
+│   │   └── storage.js
+│   │
+│   ├── App.jsx
+│   ├── index.js
+│   └── index.css
+│
+├── .env
 ├── .env.example
 ├── .gitignore
-├── vercel.json
 ├── package.json
 └── README.md
 ```
 
 ## Installation
+
+Clone the repository and enter the project directory:
+
+git clone <your-repository-url>
+cd movie-explorer
 
 ```bash
 npm install
