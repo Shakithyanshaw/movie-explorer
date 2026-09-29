@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Fab, Zoom } from '@mui/material';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material';
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);

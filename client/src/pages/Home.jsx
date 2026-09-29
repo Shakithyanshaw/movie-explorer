@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Box, Button, Chip, Container, Typography } from '@mui/material';
 import { History as HistoryIcon } from '@mui/icons-material';
 import { Whatshot as WhatshotIcon } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
 import MovieGrid from '../components/MovieGrid';
 import ErrorMessage from '../components/ErrorMessage';

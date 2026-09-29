@@ -18,7 +18,7 @@ import {
   Star as StarIcon,
   Movie as MovieIcon,
   Person as PersonIcon,
-  play as PlayArrowIcon,
+  PlayArrow as PlayArrowIcon,
 } from '@mui/icons-material';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import ErrorMessage from '../components/ErrorMessage';

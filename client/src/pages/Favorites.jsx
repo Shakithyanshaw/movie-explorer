@@ -10,7 +10,7 @@ import {
   MenuItem,
   TextField,
 } from '@mui/material';
-import { Delet as DeleteSweepIcon } from '@mui/icons-material';
+import { DeleteSweep as DeleteSweepIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import MovieGrid from '../components/MovieGrid';
 import EmptyState from '../components/EmptyState';

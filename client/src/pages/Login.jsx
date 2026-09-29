@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import {
   Whatshot as WhatshotIcon,
-  playCircleOutline as PlayCircleOutlineIcon,
+  PlayCircleOutline as PlayCircleOutlineIcon,
   FavoriteBorder as FavoriteBorderIcon,
 } from '@mui/icons-material';
 import {
