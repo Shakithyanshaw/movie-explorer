@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { IconButton, InputAdornment, TextField } from '@mui/material';
+import { Button, IconButton, InputAdornment, TextField } from '@mui/material';
+import { Close as CloseIcon } from '@mui/icons-material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { getLastSearch, saveLastSearch } from '../utils/storage';
@@ -25,11 +26,15 @@ export default function SearchBar({ initialValue }) {
     navigate(`/search?query=${encodeURIComponent(query)}`);
   };
 
+  const handleClear = () => {
+    setValue('');
+    setError('');
+  };
+
   return (
     <form onSubmit={handleSubmit} noValidate style={{ width: '100%' }}>
       <TextField
         fullWidth
-        label="Search movies"
         placeholder="Search for a movie..."
         value={value}
         onChange={(event) => {
@@ -38,18 +43,36 @@ export default function SearchBar({ initialValue }) {
         }}
         error={Boolean(error)}
         helperText={error}
-        sx={{ bgcolor: 'background.paper', borderRadius: 3 }}
+        FormHelperTextProps={{ sx: { ml: 2 } }}
+        inputProps={{ 'aria-label': 'Search movies' }}
         InputProps={{
+          sx: {
+            borderRadius: 999,
+            pl: 1.5,
+            pr: 0.75,
+            py: 0.5,
+            bgcolor: 'background.paper',
+            boxShadow: 3,
+          },
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon color="action" />
+            </InputAdornment>
+          ),
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton
-                type="submit"
-                aria-label="Search"
-                edge="end"
-                color="primary"
-              >
-                <SearchIcon />
-              </IconButton>
+              {value && (
+                <IconButton
+                  aria-label="Clear search"
+                  size="small"
+                  onClick={handleClear}
+                >
+                  <CloseIcon fontSize="small" />
+                </IconButton>
+              )}
+              <Button type="submit" variant="contained" sx={{ ml: 0.5, px: 3 }}>
+                Search
+              </Button>
             </InputAdornment>
           ),
         }}

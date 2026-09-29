@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import { AppThemeProvider } from './context/ThemeContext.jsx';
 import { MovieProvider } from './context/MovieContext.jsx';
+import { NotificationProvider } from './context/NotificationContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -12,9 +13,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AppThemeProvider>
-        <MovieProvider>
-          <App />
-        </MovieProvider>
+        <NotificationProvider>
+          <MovieProvider>
+            <App />
+          </MovieProvider>
+        </NotificationProvider>
       </AppThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

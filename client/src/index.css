@@ -17,8 +17,37 @@ img {
   max-width: 100%;
 }
 
+::selection {
+  background: rgba(255, 181, 71, 0.35);
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+.page-enter {
+  animation: pageEnter 0.35s ease both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
